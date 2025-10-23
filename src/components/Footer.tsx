@@ -43,7 +43,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Almavue logo" 
-                className="h-12 w-auto"
+                className="h-12 w-auto mix-blend-multiply dark:mix-blend-screen"
               />
             </a>
             
