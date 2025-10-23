@@ -28,22 +28,22 @@ const About = () => {
 
   const team = [
     {
-      name: "Alex Rivera",
+      name: "Shags N.",
       role: "CEO",
       image: undefined
     },
     {
-      name: "Maya Chen",
+      name: "Zunaira Nazir",
       role: "CTO",
       image: undefined
     },
     {
-      name: "David Park",
+      name: "Yasir Arfat",
       role: "CFO",
       image: cfoImage
     },
     {
-      name: "Sarah Johnson",
+      name: "Ketty John",
       role: "CHRO",
       image: undefined
     }
