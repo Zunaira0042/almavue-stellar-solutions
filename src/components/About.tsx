@@ -28,23 +28,19 @@ const About = () => {
   const team = [
     {
       name: "Alex Rivera",
-      role: "CEO & Founder",
-      expertise: "Space Technology & Strategy"
+      role: "CEO"
     },
     {
       name: "Maya Chen",
-      role: "CTO",
-      expertise: "AI & Advanced Systems"
+      role: "CTO"
     },
     {
       name: "David Park",
-      role: "Lead Developer",
-      expertise: "Full-Stack & Game Development"
+      role: "CFO"
     },
     {
       name: "Sarah Johnson",
-      role: "Space Engineer",
-      expertise: "Aerospace & Satellite Systems"
+      role: "CHRO"
     }
   ];
 
@@ -105,8 +101,7 @@ const About = () => {
                   </span>
                 </div>
                 <h4 className="text-lg font-semibold text-foreground mb-1">{member.name}</h4>
-                <p className="text-sm text-accent font-medium mb-2">{member.role}</p>
-                <p className="text-xs text-foreground/60">{member.expertise}</p>
+                <p className="text-sm text-accent font-medium">{member.role}</p>
               </CardContent>
             </Card>
           ))}
