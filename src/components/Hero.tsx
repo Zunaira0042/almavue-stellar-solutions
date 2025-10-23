@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-space.jpg";
 
 const Hero = () => {
@@ -26,13 +25,13 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-card/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2 mb-8">
+          <div className="inline-flex items-center space-x-2 bg-card/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2 mb-6">
             <Sparkles className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium text-accent">Innovation Beyond Earth</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
             Building the{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Future
@@ -41,31 +40,13 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed">
             Almavue develops cutting-edge applications, space-related solutions, and immersive games 
             that solve real-world challenges and push the boundaries of what's possible.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button 
-              size="lg"
-              className="bg-gradient-accent text-background font-semibold px-8 py-4 text-lg hover:shadow-glow transition-all duration-300 group"
-            >
-              Explore Our Projects
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-silver/30 text-silver hover:bg-silver/10 px-8 py-4 text-lg backdrop-blur-sm"
-            >
-              Learn More
-            </Button>
-          </div>
-
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">5+</div>
               <div className="text-silver">Projects Delivered</div>
