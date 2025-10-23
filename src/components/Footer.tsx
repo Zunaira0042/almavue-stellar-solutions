@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
-import almavueLogo from "@/assets/almavue-logo.jpg";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,9 +41,9 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <a href="#home" className="inline-block mb-6">
               <img 
-                src={almavueLogo} 
+                src={logo} 
                 alt="Almavue logo" 
-                className="h-12 w-auto invert brightness-0 dark:invert-0 dark:brightness-100"
+                className="h-12 w-auto"
               />
             </a>
             
