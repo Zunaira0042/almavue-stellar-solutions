@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Rocket, Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
+import almavueLogo from "@/assets/almavue-logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,14 +39,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center shadow-glow">
-                <Rocket className="w-6 h-6 text-background" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-accent bg-clip-text text-transparent">
-                Almavue
-              </span>
-            </div>
+            <a href="#home" className="inline-block mb-6">
+              <img 
+                src={almavueLogo} 
+                alt="Almavue logo" 
+                className="h-12 w-auto invert brightness-0 dark:invert-0 dark:brightness-100"
+              />
+            </a>
             
             <p className="text-foreground/70 mb-6 leading-relaxed max-w-md">
               Building the future of technology through innovative applications, 
