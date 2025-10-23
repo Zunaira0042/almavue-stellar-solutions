@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Target, Users, Zap } from "lucide-react";
+import cfoImage from "@/assets/team-cfo.png";
 
 const About = () => {
   const values = [
@@ -28,19 +29,23 @@ const About = () => {
   const team = [
     {
       name: "Alex Rivera",
-      role: "CEO"
+      role: "CEO",
+      image: undefined
     },
     {
       name: "Maya Chen",
-      role: "CTO"
+      role: "CTO",
+      image: undefined
     },
     {
       name: "David Park",
-      role: "CFO"
+      role: "CFO",
+      image: cfoImage
     },
     {
       name: "Sarah Johnson",
-      role: "CHRO"
+      role: "CHRO",
+      image: undefined
     }
   ];
 
@@ -95,11 +100,21 @@ const About = () => {
           {team.map((member, index) => (
             <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <div className="w-20 h-20 bg-gradient-accent rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-background">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
+                {member.image ? (
+                  <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-20 h-20 bg-gradient-accent rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-background">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
                 <h4 className="text-lg font-semibold text-foreground mb-1">{member.name}</h4>
                 <p className="text-sm text-accent font-medium">{member.role}</p>
               </CardContent>
