@@ -32,7 +32,7 @@ const Navigation = () => {
             <img 
   src={logo} 
   alt="Almavue logo" 
-  className="h-14 w-auto"
+  className="h-24 w-auto"
 />
           </a>
 
