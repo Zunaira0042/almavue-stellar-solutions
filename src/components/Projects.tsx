@@ -1,13 +1,10 @@
-mport { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Satellite, Gamepad2, Smartphone } from "lucide-react";
-//import MindCareImage from "./assets/MindCareImage.PNG";
 
-const example = {
-  title: "MindCare",
-  image: MindCareImage,
-};
+// ? Import your actual image
+import MindCareImage from "@/assets/MindCareImage.PNG";
 
 const Projects = () => {
   const projects = [
@@ -17,7 +14,7 @@ const Projects = () => {
       category: "Mental Health & AI",
       description:
         "MindCare is a global mental health platform connecting users with certified doctors and therapists across continents. It offers real-time counseling, AI-driven emotional support, and seamless session booking with payment integration.",
-      image: MindCareImage, // Replace with your image (e.g. uploaded screenshot)
+      image: MindCareImage,
       technologies: ["Unity", "WebGL", "JavaScript", "Firebase Cloud", "AI Integration"],
       impact: "Connecting patients with certified mental health professionals across 5 continents.",
       icon: <Smartphone className="w-6 h-6 text-accent" />,
@@ -86,13 +83,13 @@ const Projects = () => {
     },
   ];
 
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (status) => {
     const statusConfig = {
       Live: "bg-accent/20 text-accent border-accent/30",
       "In Development": "bg-electric/20 text-electric border-electric/30",
       Beta: "bg-silver/20 text-silver border-silver/30",
     };
-    return statusConfig[status as keyof typeof statusConfig] || statusConfig["Live"];
+    return statusConfig[status] || statusConfig["Live"];
   };
 
   return (
