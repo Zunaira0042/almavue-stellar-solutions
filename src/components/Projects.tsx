@@ -1,8 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Satellite, Gamepad2, Smartphone } from "lucide-react";
-import MindCareImage from "@/assets/MindCare.png";
+import { ExternalLink, Gamepad2, Smartphone } from "lucide-react";
+import MindCareVideo from "@/assets/MCV.mp4"; // ?? your video file
 
 const Projects = () => {
   const projects = [
@@ -12,7 +12,7 @@ const Projects = () => {
       category: "Mental Health & AI",
       description:
         "MindCare is a global mental health platform connecting users with certified doctors and therapists across continents. It offers real-time counseling, AI-driven emotional support, and seamless session booking with payment integration.",
-      image: MindCareImage,
+      video: MindCareVideo, // ?? use video instead of image
       technologies: [
         "Unity",
         "WebGL",
@@ -82,7 +82,7 @@ const Projects = () => {
             key={project.id}
             className={`overflow-hidden border-border/40 shadow-xl hover:shadow-glow/20 transition-all duration-500 bg-gradient-to-b from-card/90 to-muted/30 ${
               project.title === "MindCare"
-                ? "max-w-5xl mx-auto" // Center align and make wider
+                ? "max-w-5xl mx-auto"
                 : "max-w-3xl mx-auto"
             }`}
           >
@@ -91,27 +91,45 @@ const Projects = () => {
                 project.title === "MindCare" ? "lg:flex-col" : "lg:flex-row"
               } items-center`}
             >
-              {/* Image */}
+              {/* Media (Video or Image) */}
               <div
                 className={`${
                   project.title === "MindCare" ? "w-full" : "lg:w-1/2 w-full"
                 }`}
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className={`w-full ${
-                    project.title === "MindCare"
-                      ? "h-[550px] object-cover rounded-lg"
-                      : "h-[400px] object-cover"
-                  }`}
-                />
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="none"
+                    className={`w-full ${
+                      project.title === "MindCare"
+                        ? "h-[550px] object-cover rounded-lg"
+                        : "h-[400px] object-cover"
+                    }`}
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className={`w-full ${
+                      project.title === "MindCare"
+                        ? "h-[550px] object-cover rounded-lg"
+                        : "h-[400px] object-cover"
+                    }`}
+                  />
+                )}
               </div>
 
               {/* Content */}
               <CardContent
                 className={`${
-                  project.title === "MindCare" ? "w-full text-center p-10" : "lg:w-1/2 w-full p-8"
+                  project.title === "MindCare"
+                    ? "w-full text-center p-10"
+                    : "lg:w-1/2 w-full p-8"
                 }`}
               >
                 <div
