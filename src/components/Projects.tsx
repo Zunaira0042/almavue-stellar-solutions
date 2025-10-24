@@ -24,7 +24,7 @@ const Projects = () => {
         "Google Sign-In",
       ],
       impact:
-        "Connecting patients with certified mental health professionals across 5 continents, supporting 10,000+ consultations monthly.",
+        "Connecting patients with certified mental health professionals across 5 continents, supporting consultations monthly.",
       icon: <Smartphone className="w-6 h-6 text-accent" />,
       status: "Live",
       link: "https://mindcare.almavue.com/",
