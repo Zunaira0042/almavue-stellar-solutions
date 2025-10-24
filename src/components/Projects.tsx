@@ -76,29 +76,51 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Project Cards – One per Screen */}
-        {projects.map((project, index) => (
+        {/* Projects */}
+        {projects.map((project) => (
           <Card
             key={project.id}
-            className="overflow-hidden border-border/40 shadow-xl hover:shadow-glow/20 transition-all duration-500 bg-gradient-to-b from-card/90 to-muted/30"
+            className={`overflow-hidden border-border/40 shadow-xl hover:shadow-glow/20 transition-all duration-500 bg-gradient-to-b from-card/90 to-muted/30 ${
+              project.title === "MindCare"
+                ? "max-w-5xl mx-auto" // Center align and make wider
+                : "max-w-3xl mx-auto"
+            }`}
           >
             <div
-              className={`flex flex-col lg:flex-row items-center ${
-                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`flex flex-col ${
+                project.title === "MindCare" ? "lg:flex-col" : "lg:flex-row"
+              } items-center`}
             >
               {/* Image */}
-              <div className="lg:w-1/2 w-full">
+              <div
+                className={`${
+                  project.title === "MindCare" ? "w-full" : "lg:w-1/2 w-full"
+                }`}
+              >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-[400px] object-cover"
+                  className={`w-full ${
+                    project.title === "MindCare"
+                      ? "h-[550px] object-cover rounded-lg"
+                      : "h-[400px] object-cover"
+                  }`}
                 />
               </div>
 
               {/* Content */}
-              <CardContent className="lg:w-1/2 w-full p-8">
-                <div className="flex items-center space-x-3 mb-3">
+              <CardContent
+                className={`${
+                  project.title === "MindCare" ? "w-full text-center p-10" : "lg:w-1/2 w-full p-8"
+                }`}
+              >
+                <div
+                  className={`flex ${
+                    project.title === "MindCare"
+                      ? "justify-center mb-6 space-x-3"
+                      : "items-center space-x-3 mb-3"
+                  }`}
+                >
                   {project.icon}
                   <Badge className={getStatusBadge(project.status)}>
                     {project.status}
@@ -108,26 +130,48 @@ const Projects = () => {
                   </Badge>
                 </div>
 
-                <h3 className="text-3xl font-bold mb-4 text-foreground">
+                <h3
+                  className={`${
+                    project.title === "MindCare"
+                      ? "text-4xl font-extrabold mb-6"
+                      : "text-3xl font-bold mb-4"
+                  } text-foreground`}
+                >
                   {project.title}
                 </h3>
 
-                <p className="text-base text-foreground/80 mb-6 leading-relaxed">
+                <p
+                  className={`text-base text-foreground/80 mb-6 leading-relaxed ${
+                    project.title === "MindCare" ? "max-w-3xl mx-auto" : ""
+                  }`}
+                >
                   {project.description}
                 </p>
 
-                <div className="mb-6">
+                <div
+                  className={`mb-6 ${
+                    project.title === "MindCare" ? "max-w-3xl mx-auto" : ""
+                  }`}
+                >
                   <p className="text-sm font-medium text-accent mb-2">
                     Global Impact:
                   </p>
                   <p className="text-sm text-foreground/80">{project.impact}</p>
                 </div>
 
-                <div className="mb-8">
+                <div
+                  className={`mb-8 ${
+                    project.title === "MindCare" ? "max-w-3xl mx-auto" : ""
+                  }`}
+                >
                   <p className="text-sm font-medium text-silver mb-3">
                     Technologies Used:
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div
+                    className={`flex flex-wrap gap-2 ${
+                      project.title === "MindCare" ? "justify-center" : ""
+                    }`}
+                  >
                     {project.technologies.map((tech, index) => (
                       <Badge
                         key={index}
