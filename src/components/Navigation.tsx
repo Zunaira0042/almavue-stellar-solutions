@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logoo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +30,10 @@ const Navigation = () => {
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-3">
             <img 
-              src={logo} 
-              alt="Almavue logo" 
-              className="h-10 w-auto mix-blend-multiply dark:mix-blend-screen"
-            />
+  src={logo} 
+  alt="Almavue logo" 
+  className="h-10 w-auto"
+/>
           </a>
 
           {/* Desktop Navigation */}
