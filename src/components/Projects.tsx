@@ -69,7 +69,7 @@ const Projects = () => {
       impact:
         "An engaging, immersive first-person experience optimized for PC users, highlighting strong environmental design and interactive gameplay.",
       icon: <Gamepad2 className="w-6 h-6 text-electric" />,
-      status: "Live",
+      status: "Liveeee",
       link: "https://apps.microsoft.com/detail/9ppgs21dkcck?hl=en-US&gl=US", // optional demo link
     },
   ];
