@@ -12,9 +12,16 @@ const Navigation = () => {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#services", label: "Services" },
-    { href: "#blog", label: "Insights" },
+    // Removed Insights
     { href: "#contact", label: "Contact" },
   ];
+
+  const handleContactScroll = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
@@ -47,8 +54,9 @@ const Navigation = () => {
             <Button
               variant="default"
               className="bg-gradient-accent text-background font-semibold hover:shadow-glow transition-all duration-300"
+              onClick={handleContactScroll}
             >
-              Get Started
+              Contact Us
             </Button>
           </div>
 
@@ -84,8 +92,12 @@ const Navigation = () => {
             <Button
               variant="default"
               className="w-full mt-4 bg-gradient-accent text-background font-semibold hover:shadow-glow"
+              onClick={() => {
+                handleContactScroll();
+                setIsOpen(false);
+              }}
             >
-              Get Started
+              Contact Us
             </Button>
           </div>
         </div>
