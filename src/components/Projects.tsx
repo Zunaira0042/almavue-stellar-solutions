@@ -55,76 +55,75 @@ const Projects = () => {
         </div>
 
         {/* MindCare Project */}
-        <Card className="overflow-hidden border-border/40 shadow-xl hover:shadow-glow/20 transition-all duration-500 bg-gradient-to-b from-card/90 to-muted/30 max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center">
-            {/* Video on the left */}
-            <div className="lg:w-1/2 w-full">
-              <video
-                src={project.video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="none"
-                className="w-full h-[400px] object-cover rounded-lg"
-              />
-            </div>
+     <Card className="overflow-hidden border-border/40 shadow-xl hover:shadow-glow/20 transition-all duration-500 bg-gradient-to-b from-card/90 to-muted/30 max-w-6xl mx-auto">
+  <div className="flex flex-col lg:flex-row items-stretch">
+    {/* Video on the left */}
+    <div className="lg:w-1/2 w-full">
+      <video
+        src={project.video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="none"
+        className="w-full h-full lg:h-full object-cover rounded-lg"
+      />
+    </div>
 
-            {/* Content on the right */}
-            <CardContent className="lg:w-1/2 w-full p-10">
-              <div className="flex items-center space-x-3 mb-4">
-                {project.icon}
-                <Badge className={getStatusBadge(project.status)}>
-                  {project.status}
-                </Badge>
-                <Badge variant="secondary" className="text-xs">
-                  {project.category}
-                </Badge>
-              </div>
+    {/* Content on the right */}
+    <CardContent className="lg:w-1/2 w-full p-10 flex flex-col justify-center">
+      <div className="flex items-center space-x-3 mb-4">
+        {project.icon}
+        <Badge className={getStatusBadge(project.status)}>
+          {project.status}
+        </Badge>
+        <Badge variant="secondary" className="text-xs">
+          {project.category}
+        </Badge>
+      </div>
 
-              <h3 className="text-4xl font-extrabold mb-6 text-foreground">
-                {project.title}
-              </h3>
+      <h3 className="text-4xl font-extrabold mb-6 text-foreground">
+        {project.title}
+      </h3>
 
-              <p className="text-base text-foreground/80 mb-6 leading-relaxed">
-                {project.description}
-              </p>
+      <p className="text-base text-foreground/80 mb-6 leading-relaxed">
+        {project.description}
+      </p>
 
-              <div className="mb-6">
-                <p className="text-sm font-medium text-accent mb-2">
-                  Global Impact:
-                </p>
-                <p className="text-sm text-foreground/80">{project.impact}</p>
-              </div>
+      <div className="mb-6">
+        <p className="text-sm font-medium text-accent mb-2">Global Impact:</p>
+        <p className="text-sm text-foreground/80">{project.impact}</p>
+      </div>
 
-              <div className="mb-8">
-                <p className="text-sm font-medium text-silver mb-3">
-                  Technologies Used:
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, index) => (
-                    <Badge
-                      key={index}
-                      variant="outline"
-                      className="text-xs border-border/50"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
+      <div className="mb-8">
+        <p className="text-sm font-medium text-silver mb-3">
+          Technologies Used:
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech, index) => (
+            <Badge
+              key={index}
+              variant="outline"
+              className="text-xs border-border/50"
+            >
+              {tech}
+            </Badge>
+          ))}
+        </div>
+      </div>
 
-              <Button
-                size="lg"
-                className="bg-gradient-accent text-background hover:shadow-glow transition-all"
-                onClick={() => window.open(project.link, "_blank")}
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                View Live
-              </Button>
-            </CardContent>
-          </div>
-        </Card>
+      <Button
+        size="lg"
+        className="bg-gradient-accent text-background hover:shadow-glow transition-all mt-auto"
+        onClick={() => window.open(project.link, "_blank")}
+      >
+        <ExternalLink className="w-4 h-4 mr-2" />
+        View Live
+      </Button>
+    </CardContent>
+  </div>
+</Card>
+
       </div>
     </section>
   );
