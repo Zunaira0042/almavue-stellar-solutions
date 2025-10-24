@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Satellite, Gamepad2, Smartphone } from "lucide-react";
-
+import MindCareImage from "@/assets/MindCare.png";
 // ? Import your actual image
 //import MindCareImage from "@/assets/MindCareImage.PNG";
 
@@ -14,7 +14,7 @@ const Projects = () => {
       category: "Mental Health & AI",
       description:
         "MindCare is a global mental health platform connecting users with certified doctors and therapists across continents. It offers real-time counseling, AI-driven emotional support, and seamless session booking with payment integration.",
-image: "/MindCareImage.PNG",
+image: MindCareImage,
       technologies: ["Unity", "WebGL", "JavaScript", "Firebase Cloud", "AI Integration"],
       impact: "Connecting patients with certified mental health professionals across 5 continents.",
       icon: <Smartphone className="w-6 h-6 text-accent" />,
