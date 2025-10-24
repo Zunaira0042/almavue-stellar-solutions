@@ -172,13 +172,18 @@ const Services = () => {
               </div>
             ))}
           </div>
+<div className="text-center mt-12">
+  <a href="#contact" className="inline-block">
+    <Button
+      size="lg"
+      className="bg-gradient-accent text-background font-semibold hover:shadow-glow"
+    >
+      Discuss Your Project
+      <ArrowRight className="w-5 h-5 ml-2" />
+    </Button>
+  </a>
+</div>
 
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-accent text-background font-semibold hover:shadow-glow">
-              Discuss Your Project
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
         </div>
       </div>
     </section>
