@@ -2,7 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Gamepad2, Smartphone } from "lucide-react";
-import MindCareVideo from "@/assets/MCV.mp4"; // ?? your video file
+import MindCareVideo from "@/assets/MCV.mp4"; // your MindCare video
+import SpaceVideo from "@/assets/Space.mp4"; // your Space VR video
 
 const Projects = () => {
   const projects = [
@@ -12,7 +13,7 @@ const Projects = () => {
       category: "Mental Health & AI",
       description:
         "MindCare is a global mental health platform connecting users with certified doctors and therapists across continents. It offers real-time counseling, AI-driven emotional support, and seamless session booking with payment integration.",
-      video: MindCareVideo, // ?? use video instead of image
+      video: MindCareVideo,
       technologies: [
         "Unity",
         "WebGL",
@@ -24,28 +25,30 @@ const Projects = () => {
         "Google Sign-In",
       ],
       impact:
-        "Connecting patients with certified mental health professionals across 5 continents. Helping people find the right mental health professional and start their healing journey with ease and trust.",
+        "Connecting patients with certified mental health professionals across 5 continents — helping people start their healing journey with trust and ease.",
       icon: <Smartphone className="w-6 h-6 text-accent" />,
       status: "Live",
       link: "https://mindcare.almavue.com/",
     },
     {
       id: 2,
-      title: "NebulaQuest",
-      category: "Gaming",
+      title: "SpaceX VR",
+      category: "Virtual Reality",
       description:
-        "Immersive space exploration RPG with procedurally generated galaxies, AI-driven alien interactions, and stunning cosmic environments powered by Unity physics simulation.",
-      image: "/placeholder.svg",
+        "Space VR Project is an immersive virtual reality experience where I contributed as a Unity Developer, focusing on building interactive gameplay systems and optimizing the overall user experience. I worked on modular architecture and clean code practices, leveraging Zenject for dependency injection to maintain scalability and flexibility throughout the project.",
+      video: SpaceVideo,
       technologies: [
         "Unity",
-        "C#",
-        "Procedural Generation",
-        "AI NPCs",
-        "Multiplayer",
+        "Zenject (Dependency Injection)",
+        "Unity XR Interaction Toolkit",
+        "ScriptableObjects",
+        "SOLID Principles",
+        "Performance Optimization for VR",
       ],
-      impact: "1M+ downloads across platforms with a thriving online community.",
+      impact:
+        "Pioneering immersive space experiences through VR with modular, scalable, and high-performance gameplay systems.",
       icon: <Gamepad2 className="w-6 h-6 text-electric" />,
-      status: "Live",
+      status: "Beta",
       link: "#",
     },
   ];
