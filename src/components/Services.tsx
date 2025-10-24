@@ -1,90 +1,96 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Rocket, Code, Gamepad2, Satellite, Brain, Smartphone, ArrowRight } from "lucide-react";
+import { Rocket, Code, Gamepad2, Satellite, Brain, Stethoscope, ArrowRight, Building2 } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: <Satellite className="w-12 h-12 text-accent" />,
-      title: "Space Technology Solutions",
-      description: "Custom satellite systems, orbital mechanics simulation, and space mission planning software.",
+      title: "Space Exploration & VR Education",
+      description:
+        "Immersive VR-based space experiences where users can explore galaxies, black holes, nebulas, and planetary systems — making space science interactive and educational.",
       features: [
-        "Satellite tracking systems",
-        "Mission control interfaces", 
-        "Orbital simulation software",
-        "Space data analytics"
+        "Virtual reality space exploration",
+        "Interactive black hole & nebula simulations",
+        "Galactic-scale learning environments",
+        "Educational tools on space-time & gravity"
       ],
       color: "accent"
     },
     {
       icon: <Code className="w-12 h-12 text-electric" />,
       title: "Custom Application Development",
-      description: "Full-stack web and mobile applications tailored to solve your specific business challenges.",
+      description:
+        "We build full-stack web and mobile applications tailored to your goals — combining modern architecture, smooth interfaces, and scalable cloud systems.",
       features: [
         "Web application development",
         "Mobile app development",
         "API design & integration",
-        "Cloud infrastructure"
+        "Cloud infrastructure solutions"
       ],
       color: "electric"
     },
     {
       icon: <Gamepad2 className="w-12 h-12 text-accent" />,
       title: "Game Development",
-      description: "Immersive gaming experiences with cutting-edge graphics and innovative gameplay mechanics.",
+      description:
+        "Engaging and meaningful game experiences, combining creativity, storytelling, and immersive technologies such as AR and VR to educate, entertain, and inspire.",
       features: [
-        "3D game development",
-        "VR/AR experiences", 
-        "Multiplayer systems",
-        "Game engine optimization"
+        "3D & VR game experiences",
+        "Educational game design",
+        "Interactive learning environments",
+        "Optimized cross-platform builds"
       ],
       color: "accent"
     },
     {
       icon: <Brain className="w-12 h-12 text-electric" />,
       title: "AI & Machine Learning",
-      description: "Intelligent systems that learn, adapt, and provide insights to drive better decision making.",
+      description:
+        "Building intelligent systems and vertical agents that merge AI into fields like healthcare, engineering, and agriculture — enhancing decision-making and modernization.",
       features: [
-        "Predictive analytics",
-        "Computer vision",
-        "Natural language processing",
-        "Automated decision systems"
+        "AI-driven diagnostic tools",
+        "Predictive & prescriptive analytics",
+        "Computer vision & NLP",
+        "Vertical agents for diverse industries"
       ],
       color: "electric"
     },
     {
-      icon: <Smartphone className="w-12 h-12 text-accent" />,
-      title: "IoT Solutions",
-      description: "Connected device ecosystems that bridge the physical and digital worlds seamlessly.",
+      icon: <Stethoscope className="w-12 h-12 text-accent" />,
+      title: "Healthcare & Mental Wellness Technology",
+      description:
+        "Digital solutions focused on mental health and medical innovation — connecting international doctors, improving accessibility, and enabling research-driven care.",
       features: [
-        "Sensor networks",
-        "Real-time monitoring",
-        "Device management",
-        "Data visualization"
+        "Telemedicine & virtual consultations",
+        "Mental health support systems",
+        "AI-assisted healthcare platforms",
+        "Research & data-driven patient care"
       ],
       color: "accent"
     },
     {
-      icon: <Rocket className="w-12 h-12 text-electric" />,
-      title: "Innovation Consulting",
-      description: "Strategic guidance to help organizations adopt emerging technologies and drive innovation.",
+      icon: <Building2 className="w-12 h-12 text-electric" />,
+      title: "Architecture & Innovation Consulting",
+      description:
+        "From technology roadmaps to digital transformation and architectural visualization — we bridge creativity, research, and technology to build the future.",
       features: [
-        "Technology roadmapping",
-        "Digital transformation",
-        "Innovation workshops",
-        "Technical architecture"
+        "Technology roadmapping & R&D",
+        "Architectural visualization (AR/VR)",
+        "Digital transformation strategies",
+        "Innovation workshops & design thinking"
       ],
       color: "electric"
     }
   ];
 
   const problemsSolved = [
-    "Complex data visualization and analytics challenges",
-    "Real-time system monitoring and control requirements", 
-    "Scalable cloud infrastructure and deployment needs",
-    "Advanced simulation and modeling requirements",
-    "Integration of legacy systems with modern tech",
-    "Custom hardware and software integration"
+    "Creating immersive educational experiences through VR and interactive design",
+    "Bridging technology with healthcare, engineering, and architecture",
+    "Developing AI systems that understand and adapt to diverse fields",
+    "Enabling scalable and modern digital infrastructures",
+    "Advancing mental health and well-being through intelligent platforms",
+    "Transforming traditional learning into experiential knowledge"
   ];
 
   return (
@@ -99,15 +105,18 @@ const Services = () => {
             </span>
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            We specialize in solving complex technological challenges across multiple domains, 
-            from space exploration to cutting-edge applications.
+            We bridge technology with education, healthcare, and innovation — creating 
+            immersive, intelligent, and impactful solutions for a better future.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
-            <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-glow/20 transition-all duration-300 group">
+            <Card
+              key={index}
+              className="bg-gradient-card border-border/50 shadow-card hover:shadow-glow/20 transition-all duration-300 group"
+            >
               <CardHeader className="text-center pb-4">
                 <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
@@ -122,8 +131,15 @@ const Services = () => {
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-foreground/80">
-                      <ArrowRight className={`w-4 h-4 mr-2 ${service.color === 'accent' ? 'text-accent' : 'text-electric'}`} />
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-sm text-foreground/80"
+                    >
+                      <ArrowRight
+                        className={`w-4 h-4 mr-2 ${
+                          service.color === "accent" ? "text-accent" : "text-electric"
+                        }`}
+                      />
                       {feature}
                     </li>
                   ))}
@@ -143,8 +159,8 @@ const Services = () => {
               </span>
             </h3>
             <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-              Our expertise spans across various technological challenges, 
-              delivering solutions that drive real business impact.
+              Our expertise merges innovation and education to tackle real-world 
+              challenges through technology, research, and creative thinking.
             </p>
           </div>
 
