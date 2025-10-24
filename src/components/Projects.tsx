@@ -3,8 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Satellite, Gamepad2, Smartphone } from "lucide-react";
 import MindCareImage from "@/assets/MindCare.png";
-// ? Import your actual image
-//import MindCareImage from "@/assets/MindCareImage.PNG";
 
 const Projects = () => {
   const projects = [
@@ -14,9 +12,19 @@ const Projects = () => {
       category: "Mental Health & AI",
       description:
         "MindCare is a global mental health platform connecting users with certified doctors and therapists across continents. It offers real-time counseling, AI-driven emotional support, and seamless session booking with payment integration.",
-image: MindCareImage,
-      technologies: ["Unity", "WebGL", "JavaScript", "Firebase Cloud", "AI Integration"],
-      impact: "Connecting patients with certified mental health professionals across 5 continents.",
+      image: MindCareImage,
+      technologies: [
+        "Unity",
+        "WebGL",
+        "JavaScript",
+        "Firebase Cloud",
+        "AI Integration",
+        "Firestore",
+        "Zenject",
+        "Google Sign-In",
+      ],
+      impact:
+        "Connecting patients with certified mental health professionals across 5 continents, supporting 10,000+ consultations monthly.",
       icon: <Smartphone className="w-6 h-6 text-accent" />,
       status: "Live",
       link: "https://mindcare.almavue.com/",
@@ -26,60 +34,19 @@ image: MindCareImage,
       title: "NebulaQuest",
       category: "Gaming",
       description:
-        "Immersive space exploration RPG with procedurally generated galaxies and realistic physics simulation.",
+        "Immersive space exploration RPG with procedurally generated galaxies, AI-driven alien interactions, and stunning cosmic environments powered by Unity physics simulation.",
       image: "/placeholder.svg",
-      technologies: ["Unity", "C#", "Procedural Generation", "Multiplayer", "AI"],
-      impact: "1M+ downloads across platforms",
+      technologies: [
+        "Unity",
+        "C#",
+        "Procedural Generation",
+        "AI NPCs",
+        "Multiplayer",
+      ],
+      impact: "1M+ downloads across platforms with a thriving online community.",
       icon: <Gamepad2 className="w-6 h-6 text-electric" />,
       status: "Live",
-    },
-    {
-      id: 3,
-      title: "AgroSense AI",
-      category: "Agriculture Tech",
-      description:
-        "Smart farming application using satellite imagery and AI to optimize crop yields and resource management.",
-      image: "/placeholder.svg",
-      technologies: ["Python", "TensorFlow", "Satellite Imagery", "IoT", "React Native"],
-      impact: "30% yield increase for 1000+ farms",
-      icon: <Smartphone className="w-6 h-6 text-accent" />,
-      status: "Live",
-    },
-    {
-      id: 4,
-      title: "StarLink Dashboard",
-      category: "Space Technology",
-      description:
-        "Mission control interface for small satellite constellations with real-time telemetry and command capabilities.",
-      image: "/placeholder.svg",
-      technologies: ["Vue.js", "Python", "Redis", "WebSocket", "Docker"],
-      impact: "Managing 200+ satellites",
-      icon: <Satellite className="w-6 h-6 text-electric" />,
-      status: "In Development",
-    },
-    {
-      id: 5,
-      title: "VR Training Sim",
-      category: "Virtual Reality",
-      description:
-        "Astronaut training simulation for spacewalk procedures and emergency response protocols.",
-      image: "/placeholder.svg",
-      technologies: ["Unity VR", "Oculus SDK", "Physics Engine", "Training Analytics"],
-      impact: "Training 500+ astronauts",
-      icon: <Gamepad2 className="w-6 h-6 text-accent" />,
-      status: "Beta",
-    },
-    {
-      id: 6,
-      title: "Climate Monitor",
-      category: "Environmental Tech",
-      description:
-        "Global climate monitoring system using satellite data to track environmental changes and predict trends.",
-      image: "/placeholder.svg",
-      technologies: ["Machine Learning", "Satellite Data", "Time Series", "GIS", "APIs"],
-      impact: "Monitoring 95% of Earth's surface",
-      icon: <Satellite className="w-6 h-6 text-electric" />,
-      status: "Live",
+      link: "#",
     },
   ];
 
@@ -94,9 +61,9 @@ image: MindCareImage,
 
   return (
     <section id="projects" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 space-y-24">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
@@ -104,55 +71,64 @@ image: MindCareImage,
             </span>
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            Explore the innovative solutions we’ve built — from mental health platforms and
-            AI-driven tools to immersive space and gaming experiences.
+            Explore the groundbreaking innovations we've built — from global
+            mental health platforms to immersive space adventures.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <Card
-              key={project.id}
-              className="bg-gradient-card border-border/50 shadow-card hover:shadow-glow/20 transition-all duration-300 group overflow-hidden"
+        {/* Project Cards – One per Screen */}
+        {projects.map((project, index) => (
+          <Card
+            key={project.id}
+            className="overflow-hidden border-border/40 shadow-xl hover:shadow-glow/20 transition-all duration-500 bg-gradient-to-b from-card/90 to-muted/30"
+          >
+            <div
+              className={`flex flex-col lg:flex-row items-center ${
+                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+              }`}
             >
-              <div className="relative">
+              {/* Image */}
+              <div className="lg:w-1/2 w-full">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
-                <div className="absolute top-4 left-4 flex items-center space-x-2">
-                  {project.icon}
-                  <Badge className={getStatusBadge(project.status)}>{project.status}</Badge>
-                </div>
               </div>
 
-              <CardContent className="p-6">
-                <div className="mb-2">
+              {/* Content */}
+              <CardContent className="lg:w-1/2 w-full p-8">
+                <div className="flex items-center space-x-3 mb-3">
+                  {project.icon}
+                  <Badge className={getStatusBadge(project.status)}>
+                    {project.status}
+                  </Badge>
                   <Badge variant="secondary" className="text-xs">
                     {project.category}
                   </Badge>
                 </div>
 
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+                <h3 className="text-3xl font-bold mb-4 text-foreground">
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-foreground/70 mb-4 leading-relaxed">
+                <p className="text-base text-foreground/80 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
-                <div className="mb-4">
-                  <p className="text-xs font-medium text-accent mb-2">Global Impact:</p>
+                <div className="mb-6">
+                  <p className="text-sm font-medium text-accent mb-2">
+                    Global Impact:
+                  </p>
                   <p className="text-sm text-foreground/80">{project.impact}</p>
                 </div>
 
-                <div className="mb-6">
-                  <p className="text-xs font-medium text-silver mb-2">Technologies:</p>
-                  <div className="flex flex-wrap gap-1">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
+                <div className="mb-8">
+                  <p className="text-sm font-medium text-silver mb-3">
+                    Technologies Used:
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, index) => (
                       <Badge
                         key={index}
                         variant="outline"
@@ -161,44 +137,21 @@ image: MindCareImage,
                         {tech}
                       </Badge>
                     ))}
-                    {project.technologies.length > 3 && (
-                      <Badge
-                        variant="outline"
-                        className="text-xs border-border/50"
-                      >
-                        +{project.technologies.length - 3}
-                      </Badge>
-                    )}
                   </div>
                 </div>
 
-                <div className="flex">
-                  <Button
-                    size="sm"
-                    variant="default"
-                    className="flex-1 bg-gradient-accent text-background hover:shadow-glow"
-                    onClick={() => window.open(project.link, "_blank")}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Live
-                  </Button>
-                </div>
+                <Button
+                  size="lg"
+                  className="bg-gradient-accent text-background hover:shadow-glow transition-all"
+                  onClick={() => window.open(project.link, "_blank")}
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View Live
+                </Button>
               </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-accent/30 text-accent hover:bg-accent/10"
-          >
-            View All Projects
-            <ExternalLink className="w-5 h-5 ml-2" />
-          </Button>
-        </div>
+            </div>
+          </Card>
+        ))}
       </div>
     </section>
   );
