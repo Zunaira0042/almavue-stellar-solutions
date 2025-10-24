@@ -2,7 +2,7 @@ mport { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Satellite, Gamepad2, Smartphone } from "lucide-react";
-import MindCareImage from "./assets/MindCareImage.PNG";
+//import MindCareImage from "./assets/MindCareImage.PNG";
 
 const example = {
   title: "MindCare",
