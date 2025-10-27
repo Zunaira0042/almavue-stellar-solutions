@@ -3,7 +3,7 @@ import { Rocket, Target, Users, Zap } from "lucide-react";
 import cfoImage from "@/assets/team-cfo.png";
 import chroImage from "@/assets/team-chro.png";
 import ctoImage from "@/assets/team-cto.png";
-
+import ceoImage from "@/assets/team-ceo.png";
 const About = () => {
   const values = [
     {
@@ -32,7 +32,7 @@ const About = () => {
     {
       name: "Shags N.",
       role: "CEO",
-      image: undefined
+      image: ceoImage
     },
     {
       name: "Zunaira Nazir",
