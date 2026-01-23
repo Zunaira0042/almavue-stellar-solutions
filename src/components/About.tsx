@@ -28,13 +28,7 @@ const About = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Shags N.",
-      role: "CEO",
-      image: ceoImage
-    },
-    {
+  const team = [    {
       name: "Zunaira Nazir",
       role: "CTO",
       image: ctoImage
