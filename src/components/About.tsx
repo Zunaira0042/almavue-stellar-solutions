@@ -4,6 +4,7 @@ import cfoImage from "@/assets/team-cfo.png";
 import chroImage from "@/assets/team-chro.png";
 import ctoImage from "@/assets/team-cto.png";
 import ceoImage from "@/assets/team-ceo.png";
+import cmoImage from "@/assets/team-cmo.png";
 const About = () => {
   const values = [
     {
@@ -28,11 +29,23 @@ const About = () => {
     }
   ];
 
-  const team = [    {
+  const team = [
+    {
+      name: "Shags N.",
+      role: "CEO",
+      image: ceoImage
+    },    
+    {
       name: "Zunaira Nazir",
       role: "CTO",
       image: ctoImage
     },
+{
+      name: "Tanja Schmid",
+      role: "CMO",
+      image: cmoImage
+    },
+
     {
       name: "Yasir Arfat",
       role: "CFO",
