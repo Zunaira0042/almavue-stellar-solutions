@@ -31,7 +31,7 @@ const About = () => {
 
   const team = [
     {
-      name: "Shags N.",
+      name: "Shags Naaaaa.",
       role: "CEO",
       image: ceoImage
     },    
