@@ -36,11 +36,6 @@ const About = () => {
       image: ceoImage
     },    
     {
-      name: "Zunaira Nazir",
-      role: "CTO",
-      image: ctoImage
-    },
-{
       name: "Tanja Schmid",
       role: "CMO",
       image: cmoImage
