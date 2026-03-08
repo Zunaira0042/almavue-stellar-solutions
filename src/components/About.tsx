@@ -36,7 +36,7 @@ const About = () => {
       image: ceoImage
     },    
     {
-      name: "Tanja Schmid",
+      name: "Tanjaaaaaaa Schmid",
       role: "CMO",
       image: cmoImage
     },
