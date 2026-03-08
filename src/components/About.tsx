@@ -47,7 +47,7 @@ const About = () => {
       image: cfoImage
     },
     {
-      name: "Ketty John",
+      name: "CMO",
       role: "CHRO",
       image: chroImage
     }
