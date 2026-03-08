@@ -49,7 +49,7 @@ const About = () => {
     {
       name: "CMO",
       role: "CHRO",
-      image: chroImage
+      image: cmoImage
     }
   ];
 
