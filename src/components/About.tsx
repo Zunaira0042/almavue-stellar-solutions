@@ -4,7 +4,7 @@ import cfoImage from "@/assets/team-cfo.png";
 import chroImage from "@/assets/team-chro.png";
 import ctoImage from "@/assets/team-cto.png";
 import ceoImage from "@/assets/team-ceo.png";
-import cmoImage from "@/assets/team-cmo.png";
+import cmoImage from "@src/assets/team-cmo.png";
 const About = () => {
   const values = [
     {
