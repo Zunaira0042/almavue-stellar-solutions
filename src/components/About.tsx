@@ -42,7 +42,7 @@ const About = () => {
     },
     {
       name: "Zunaira Nazir",
-      role: "CTO","Developer"
+      role: "CTO",
       image: ctoImage
     },
 
@@ -105,7 +105,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {team.map((member, index) => (
             <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
               <CardContent className="p-6 text-center">
