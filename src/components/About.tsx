@@ -42,7 +42,7 @@ const About = () => {
     },
     {
       name: "Zunaira Nazir",
-      role: "CTO",
+      role: "CTO","Developer"
       image: ctoImage
     },
 
