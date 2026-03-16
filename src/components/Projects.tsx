@@ -95,7 +95,7 @@ const Projects = () => {
             </span>
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            Explore the groundbreaking innovations we've built — from global mental health platforms to immersive VR and PC experiences.
+            Explore the groundbreaking innovations we've built  from global mental health platforms to immersive VR and PC experiences.
           </p>
         </div>
 
