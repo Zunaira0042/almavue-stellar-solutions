@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Target, Users, Zap } from "lucide-react";
 import cfoImage from "@/assets/team-cfo.png";
+import AnnaImage from "@/assets/Anna.jpg";
 import chroImage from "@/assets/team-chro.png";
 import ctoImage from "@/assets/team-cto.png";
 import ceoImage from "@/assets/team-ceo.png";
@@ -47,9 +48,9 @@ const About = () => {
     },
 
     {
-      name: "Yasir Arfat",
-      role: "CFO",
-      image: cfoImage
+      name: "Anna",
+      role: "Psychologist",
+      image: AnnaImage
     },
     {
       name: "Ketty John",
