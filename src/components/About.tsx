@@ -5,7 +5,7 @@ import chroImage from "@/assets/team-chro.png";
 import ctoImage from "@/assets/team-cto.png";
 import ceoImage from "@/assets/team-ceo.png";
 import cmoImage from "@/assets/team-cmo.png";
-import jananiImage from "@/assets/Janani.jpg";
+import jananiImage from "@/assets/Janani.png";
 import mennaImage from "@/assets/Menna.png";
 import erasmusImage from "@/assets/Erasmus.png";
 import AnnaImage from "@/assets/Anna.png";
@@ -202,7 +202,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {team.map((member, index) => (
             <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-8 text-center">
                 {member.image ? (
                   <div className="w-32 h-32 rounded-2xl mx-auto mb-4 overflow-hidden">
     <img
