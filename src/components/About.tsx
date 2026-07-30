@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Target, Users, Zap } from "lucide-react";
 import cfoImage from "@/assets/team-cfo.png";
+import AnnaImage from "@/assets/Anna.jpg";
 import chroImage from "@/assets/team-chro.png";
 import ctoImage from "@/assets/team-cto.png";
 import ceoImage from "@/assets/team-ceo.png";
@@ -31,7 +32,7 @@ const About = () => {
 
   const team = [
     {
-      name: "Shags Naaaaa.",
+      name: "Shlli",
       role: "CEO",
       image: ceoImage
     },    
@@ -40,11 +41,16 @@ const About = () => {
       role: "CMO",
       image: cmoImage
     },
+    {
+      name: "Zunaira Nazir",
+      role: "CTO",
+      image: ctoImage
+    },
 
     {
-      name: "Yasir Arfat",
-      role: "CFO",
-      image: cfoImage
+      name: "Anna",
+      role: "Psychologist",
+      image: AnnaImage
     },
     {
       name: "Ketty John",
@@ -100,7 +106,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {team.map((member, index) => (
             <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
               <CardContent className="p-6 text-center">
