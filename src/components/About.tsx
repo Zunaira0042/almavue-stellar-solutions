@@ -1,11 +1,25 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Target, Users, Zap } from "lucide-react";
 import cfoImage from "@/assets/team-cfo.png";
-import AnnaImage from "@/assets/Anna.jpg";
 import chroImage from "@/assets/team-chro.png";
 import ctoImage from "@/assets/team-cto.png";
 import ceoImage from "@/assets/team-ceo.png";
 import cmoImage from "@/assets/team-cmo.png";
+import jananiImage from "@/assets/Janani.jpg";
+import mennaImage from "@/assets/Menna.png";
+import erasmusImage from "@/assets/Erasmus.png";
+import AnnaImage from "@/assets/Anna.png";
+import juliaImage from "@/assets/Julia.png";
+import shellieImage from "@/assets/Shellie.png";
+import successImage from "@/assets/Success.png";
+import oluwaImage from "@/assets/OluwaBukola.png";
+import euniceImage from "@/assets/Eunice.png";
+import margaretImage from "@/assets/Margaret.png";
+import laibaImage from "@/assets/Laiba.png";
+import amandaImage from "@/assets/Amanda.png";
+
+
+
 const About = () => {
   const values = [
     {
@@ -31,33 +45,112 @@ const About = () => {
   ];
 
   const team = [
-    {
-      name: "Shlli",
-      role: "CEO",
-      image: ceoImage
-    },    
-    {
-      name: "Tanja Schmid",
-      role: "CMO",
-      image: cmoImage
-    },
-    {
-      name: "Zunaira Nazir",
-      role: "CTO",
-      image: ctoImage
-    },
-
-    {
-      name: "Anna",
-      role: "Psychologist",
-      image: AnnaImage
-    },
-    {
-      name: "Ketty John",
-      role: "CHRO",
-      image: chroImage
-    }
-  ];
+  {
+    name: "Zunaira Nazir",
+    role: "Chief Technical Officer (CTO)",
+    country: "Pakistan",
+    specialization: "VR • Web • Unity • XR Technologies",
+    image: ctoImage,
+  },
+{
+    name: "Tanja Schmid",
+    role: "Chief Marketing Officer (CMO)",
+    country: "Germany",
+    specialization: "Global Marketing • Brand Strategy •                  Strategic Partnerships",
+    image: cmoImage,
+},
+  {
+    name: "Nudrat Naem",
+    role: "Chief Human Resources Officer (CHRO)",
+    country: "Pakistan",
+    specialization: "People Operations & Talent Development",
+    image: chroImage,
+  },
+  {
+    name: "Janani Jeyaprakash",
+    role: "Product Experience Designer",
+    country: "India",
+    specialization: "UI/UX Design • User Research",
+    image: jananiImage,
+  },
+  {
+    name: "Menna Younis",
+    role: "Product Experience Designer",
+    country: "Egypt",
+    specialization: "UI/UX Design • Product Design",
+    image: mennaImage,
+  },
+  {
+    name: "Erasmus Okiror",
+    role: "XR & Unity Developer",
+    country: "Uganda",
+    specialization: "VR • Unity • Interactive Experiences",
+    image: erasmusImage,
+  },
+  {
+    name: "Anna",
+    role: "Mental Health Expert",
+    country: "Ukraine",
+    specialization: "Emotional Wellness • Clinical Support",
+    image: AnnaImage,
+  },
+  {
+    name: "Julia Zielina",
+    role: "Relationship & Wellness Expert",
+    country: "Poland",
+    specialization: "Self-Confidence • Relationships • Emotional Wellness",
+    image: juliaImage,
+  },
+{
+    name: "Shellie R. Warren",
+    role: "Personal Growth & Wellness Coach",
+    country: "United States",
+    specialization: "Personal Development • Mindset • Life Coaching",
+    image: shellieImage,
+},
+  {
+    name: "Amanda Almeida",
+    role: "Mental Health Expert",
+    country: "Brazil",
+    specialization: "Anxiety • Neurodevelopmental Support",
+    image: amandaImage,
+  },
+  {
+    name: "Success Smith",
+    role: "Mental Wellness Specialist",
+    country: "Nigeria",
+    specialization: "Emotional Resilience • Personal Growth",
+    image: successImage,
+  },
+  {
+    name: "Oluwabukola A.",
+    role: "Behavioral Wellness Specialist",
+    country: "Nigeria",
+    specialization: "Trauma • CBT • Emotional Support",
+    image: oluwaImage,
+  },
+  {
+    name: "Eunice W.",
+    role: "Mental Wellness Consultant",
+    country: "Kenya",
+    specialization: "Anxiety • Trauma • Depression Support",
+    image: euniceImage,
+  },
+  {
+    name: "Margaret Vasileva",
+    role: "Mental Health Expert",
+    country: "Bulgaria",
+    specialization: "Trauma • Self-Reflection • Emotional Wellness",
+    image: margaretImage,
+  },
+  {
+    name: "Laiba Tariq",
+    role: "Psychotherapy Specialist",
+    country: "Pakistan",
+    specialization: "CBT • DBT • Art Therapy • Mindfulness",
+    image: laibaImage,
+  },
+];
 
   return (
     <section id="about" className="py-24 bg-background">
@@ -95,9 +188,9 @@ const About = () => {
         {/* Team Section */}
         <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">
-            Meet Our{" "}
+            Meet the Minds Behind {" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Team
+              Almavue
             </span>
           </h3>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-12">
@@ -111,13 +204,13 @@ const About = () => {
             <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
               <CardContent className="p-6 text-center">
                 {member.image ? (
-                  <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <div className="w-32 h-32 rounded-2xl mx-auto mb-4 overflow-hidden">
+    <img
+        src={member.image}
+        alt={member.name}
+        className="w-full h-full object-cover"
+    />
+</div>
                 ) : (
                   <div className="w-20 h-20 bg-gradient-accent rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-background">
