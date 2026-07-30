@@ -49,105 +49,105 @@ const About = () => {
     name: "Zunaira Nazir",
     role: "Chief Technical Officer (CTO)",
     country: "Pakistan",
-    specialization: "VR • Web • XR",
+    specialization: "Unity | Web | XR",
     image: ctoImage,
 },
 {
     name: "Tanja Schmid",
     role: "Chief Marketing Officer (CMO)",
     country: "Germany",
-    specialization: "Marketing • Branding",
+    specialization: "Marketing | Branding",
     image: cmoImage,
 },
 {
     name: "Nudrat Naem",
     role: "Chief Human Resources Officer (CHRO)",
     country: "Pakistan",
-    specialization: "Talent • Leadership",
+    specialization: "Talent | Leadership",
     image: chroImage,
 },
 {
     name: "Janani Jeyaprakash",
     role: "Product Experience Designer",
     country: "India",
-    specialization: "UI/UX • Research",
+    specialization: "UI/UX | Research",
     image: jananiImage,
 },
 {
     name: "Menna Younis",
     role: "Product Experience Designer",
     country: "Egypt",
-    specialization: "UI/UX • Product Design",
+    specialization: "UI/UX | Product Design",
     image: mennaImage,
 },
 {
     name: "Erasmus Okiror",
     role: "XR & Unity Developer",
     country: "Uganda",
-    specialization: "VR • Unity • XR",
+    specialization: "VR | Unity | XR",
     image: erasmusImage,
 },
 {
     name: "Anna",
     role: "Mental Wellness Expert",
     country: "Ukraine",
-    specialization: "Wellness • Support",
+    specialization: "Wellness | Support",
     image: AnnaImage,
 },
 {
     name: "Julia Zielina",
     role: "Relationship & Wellness Expert",
     country: "Poland",
-    specialization: "Relationships • Wellness",
+    specialization: "Relationships | Wellness",
     image: juliaImage,
 },
 {
     name: "Shellie R. Warren",
     role: "Personal Growth & Wellness Coach",
     country: "United States",
-    specialization: "Growth • Mindset",
+    specialization: "Growth | Mindset",
     image: shellieImage,
 },
 {
     name: "Amanda Almeida",
     role: "Mental Wellness Expert",
     country: "Brazil",
-    specialization: "Anxiety • Support",
+    specialization: "Anxiety | Support",
     image: amandaImage,
 },
 {
     name: "Success Smith",
     role: "Mental Wellness Specialist",
     country: "Nigeria",
-    specialization: "Resilience • Growth",
+    specialization: "Resilience | Growth",
     image: successImage,
 },
 {
     name: "Oluwabukola A.",
     role: "Behavioral Wellness Specialist",
     country: "Nigeria",
-    specialization: "Trauma • CBT",
+    specialization: "Trauma | CBT",
     image: oluwaImage,
 },
 {
     name: "Eunice W.",
     role: "Mental Wellness Consultant",
     country: "Kenya",
-    specialization: "Anxiety • Trauma",
+    specialization: "Anxiety | Trauma",
     image: euniceImage,
 },
 {
     name: "Margaret Vasileva",
     role: "Mental Wellness Expert",
     country: "Bulgaria",
-    specialization: "Trauma • Reflection",
+    specialization: "Trauma | Reflection",
     image: margaretImage,
 },
 {
     name: "Laiba Tariq",
     role: "Psychotherapy Specialist",
     country: "Pakistan",
-    specialization: "CBT • DBT",
+    specialization: "CBT | DBT",
     image: laibaImage,
 },
 ];
@@ -201,7 +201,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {team.map((member, index) => (
-            <Card key={index} className="min-h-[350px] bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
+            <Card key={index} className="min-h-[250px] bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
               <CardContent className="p-8 text-center">
                 {member.image ? (
                   <div className="w-40 h-40 rounded-2xl mx-auto mb-4 overflow-hidden">
@@ -226,13 +226,14 @@ const About = () => {
     {member.role}
 </p>
 
-<p className="text-xs text-foreground/70 mb-1">
+<p className="text-xs text-cyan-300 mb-1">
     {member.country}
 </p>
 
-<p className="text-[10px] text-foreground/60 leading-relaxed">
+<p className="text-[10px] text-slate-400 leading-relaxed">
     {member.specialization}
-</p>              </CardContent>
+</p>
+</CardContent>
             </Card>
           ))}
         </div>
