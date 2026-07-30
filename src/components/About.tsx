@@ -201,7 +201,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {team.map((member, index) => (
-            <Card key={index} className="min-h-[550px] bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
+            <Card key={index} className="min-h-[350px] bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
               <CardContent className="p-8 text-center">
                 {member.image ? (
                   <div className="w-40 h-40 rounded-2xl mx-auto mb-4 overflow-hidden">
