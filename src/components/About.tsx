@@ -45,111 +45,111 @@ const About = () => {
   ];
 
   const team = [
-  {
+ {
     name: "Zunaira Nazir",
     role: "Chief Technical Officer (CTO)",
     country: "Pakistan",
-    specialization: "VR • Web • Unity • XR Technologies",
+    specialization: "VR • Web • XR",
     image: ctoImage,
-  },
+},
 {
     name: "Tanja Schmid",
     role: "Chief Marketing Officer (CMO)",
     country: "Germany",
-    specialization: "Global Marketing • Brand Strategy •                  Strategic Partnerships",
+    specialization: "Marketing • Branding",
     image: cmoImage,
 },
-  {
+{
     name: "Nudrat Naem",
     role: "Chief Human Resources Officer (CHRO)",
     country: "Pakistan",
-    specialization: "People Operations & Talent Development",
+    specialization: "Talent • Leadership",
     image: chroImage,
-  },
-  {
+},
+{
     name: "Janani Jeyaprakash",
     role: "Product Experience Designer",
     country: "India",
-    specialization: "UI/UX Design • User Research",
+    specialization: "UI/UX • Research",
     image: jananiImage,
-  },
-  {
+},
+{
     name: "Menna Younis",
     role: "Product Experience Designer",
     country: "Egypt",
-    specialization: "UI/UX Design • Product Design",
+    specialization: "UI/UX • Product Design",
     image: mennaImage,
-  },
-  {
+},
+{
     name: "Erasmus Okiror",
     role: "XR & Unity Developer",
     country: "Uganda",
-    specialization: "VR • Unity • Interactive Experiences",
+    specialization: "VR • Unity • XR",
     image: erasmusImage,
-  },
-  {
+},
+{
     name: "Anna",
-    role: "Mental Health Expert",
+    role: "Mental Wellness Expert",
     country: "Ukraine",
-    specialization: "Emotional Wellness • Clinical Support",
+    specialization: "Wellness • Support",
     image: AnnaImage,
-  },
-  {
+},
+{
     name: "Julia Zielina",
     role: "Relationship & Wellness Expert",
     country: "Poland",
-    specialization: "Self-Confidence • Relationships • Emotional Wellness",
+    specialization: "Relationships • Wellness",
     image: juliaImage,
-  },
+},
 {
     name: "Shellie R. Warren",
     role: "Personal Growth & Wellness Coach",
     country: "United States",
-    specialization: "Personal Development • Mindset • Life Coaching",
+    specialization: "Growth • Mindset",
     image: shellieImage,
 },
-  {
+{
     name: "Amanda Almeida",
-    role: "Mental Health Expert",
+    role: "Mental Wellness Expert",
     country: "Brazil",
-    specialization: "Anxiety • Neurodevelopmental Support",
+    specialization: "Anxiety • Support",
     image: amandaImage,
-  },
-  {
+},
+{
     name: "Success Smith",
     role: "Mental Wellness Specialist",
     country: "Nigeria",
-    specialization: "Emotional Resilience • Personal Growth",
+    specialization: "Resilience • Growth",
     image: successImage,
-  },
-  {
+},
+{
     name: "Oluwabukola A.",
     role: "Behavioral Wellness Specialist",
     country: "Nigeria",
-    specialization: "Trauma • CBT • Emotional Support",
+    specialization: "Trauma • CBT",
     image: oluwaImage,
-  },
-  {
+},
+{
     name: "Eunice W.",
     role: "Mental Wellness Consultant",
     country: "Kenya",
-    specialization: "Anxiety • Trauma • Depression Support",
+    specialization: "Anxiety • Trauma",
     image: euniceImage,
-  },
-  {
+},
+{
     name: "Margaret Vasileva",
-    role: "Mental Health Expert",
+    role: "Mental Wellness Expert",
     country: "Bulgaria",
-    specialization: "Trauma • Self-Reflection • Emotional Wellness",
+    specialization: "Trauma • Reflection",
     image: margaretImage,
-  },
-  {
+},
+{
     name: "Laiba Tariq",
     role: "Psychotherapy Specialist",
     country: "Pakistan",
-    specialization: "CBT • DBT • Art Therapy • Mindfulness",
+    specialization: "CBT • DBT",
     image: laibaImage,
-  },
+},
 ];
 
   return (
@@ -174,7 +174,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {values.map((value, index) => (
             <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-glow/30 transition-all duration-300 group">
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-10 text-center">
                 <div className="mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
                 </div>
@@ -199,12 +199,12 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {team.map((member, index) => (
-            <Card key={index} className="bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
+            <Card key={index} className="min-h-[550px] bg-gradient-card border-border/50 shadow-card hover:shadow-electric/20 transition-all duration-300">
               <CardContent className="p-8 text-center">
                 {member.image ? (
-                  <div className="w-32 h-32 rounded-2xl mx-auto mb-4 overflow-hidden">
+                  <div className="w-40 h-40 rounded-2xl mx-auto mb-4 overflow-hidden">
     <img
         src={member.image}
         alt={member.name}
