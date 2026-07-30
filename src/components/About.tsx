@@ -218,7 +218,7 @@ const About = () => {
                     </span>
                   </div>
                 )}
-                <h4 className="text-lg font-semibold text-foreground mb-1">
+<h4 className="text-base font-semibold text-foreground mb-1">
     {member.name}
 </h4>
 
@@ -230,10 +230,9 @@ const About = () => {
     {member.country}
 </p>
 
-<p className="text-xs text-foreground/60">
+<p className="text-[10px] text-foreground/60 leading-relaxed">
     {member.specialization}
-</p>
-              </CardContent>
+</p>              </CardContent>
             </Card>
           ))}
         </div>
