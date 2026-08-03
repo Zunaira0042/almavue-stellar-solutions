@@ -111,7 +111,7 @@ const Solutions  = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Services
+              Solutions
             </span>
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
@@ -120,7 +120,7 @@ const Solutions  = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Solutions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
   {solutions.map((service, index) => (
             <Card

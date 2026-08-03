@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import Solutions from "@/components/Solutions";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Impact from "@/components/Impact";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <Projects />
+       <Impact />
       <Solutions />
       <Contact />
       <Footer />
