@@ -10,6 +10,7 @@ import {
   Users,
   Globe,
   Quote,
+  Star,
 } from "lucide-react";
 
 import kenya1 from "@/assets/impact/kenya1.png";
@@ -18,21 +19,16 @@ import kenya3 from "@/assets/impact/kenya3.png";
 
 import purpose1 from "@/assets/impact/purpose1.png";
 import purpose2 from "@/assets/impact/purpose2.png";
+
 const Impact = () => {
   const events = [
     {
       title: "Addressing Youth Mental Health Challenges",
-
       country: "Kenya",
-
       location: "Virtual Event",
-
       date: "June 2026",
-
       organization: "Kabila La Vijana",
-
-      participants: "50+",
-
+      participants: "50+ Youth",
       countries: "6 Countries",
 
       speakers: [
@@ -40,10 +36,29 @@ const Impact = () => {
         "Success Smith",
       ],
 
-      images: [kenya1, kenya2, kenya3],
+      images: [
+        kenya1,
+        kenya2,
+        kenya3,
+      ],
 
-      review:
-        "The session created an engaging and meaningful discussion on youth mental wellbeing while bringing together participants from different countries.",
+      reviews: [
+        {
+          name: "Trecy Ingutia",
+          role: "Project Manager",
+          company: "Kabila La Vijana",
+          text:
+            "Almavue created a meaningful space where young people felt heard, supported, and inspired. The conversations brought hope and encouraged us to continue creating safe spaces for youth.",
+        },
+
+        {
+          name: "Japheth Ambui",
+          role: "Youth Leader",
+          company: "Kabila La Vijana",
+          text:
+            "The discussion encouraged open conversations around mental health while empowering young people with confidence, resilience, and the importance of seeking support.",
+        },
+      ],
     },
 
     {
@@ -57,199 +72,280 @@ const Impact = () => {
 
       organization: "International Community",
 
-      participants: "International Audience",
+      participants: "Global Audience",
 
       countries: "Multiple Countries",
 
-      speakers: ["Shellie R. Warren"],
+      speakers: [
+        "Shellie R. Warren",
+      ],
 
-      images: [purpose1, purpose2],
+      images: [
+        purpose1,
+        purpose2,
+      ],
 
-      review:
-        "An inspiring discussion focused on purpose, wellbeing, and personal growth with professionals from around the world.",
+      reviews: [
+        {
+          name: "International Participant",
+          role: "Attendee",
+          company: "Purpose Driven Life",
+          text:
+            "An inspiring session that encouraged personal growth, self-discovery, and living with purpose.",
+        },
+
+        {
+          name: "Community Member",
+          role: "Participant",
+          company: "Purpose Driven Life",
+          text:
+            "A thoughtful discussion that connected people from different backgrounds through meaningful conversations.",
+        },
+      ],
     },
   ];
 
   const [eventIndex, setEventIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
+  const [reviewIndex, setReviewIndex] = useState(0);
 
   const current = events[eventIndex];
 
   useEffect(() => {
     setImageIndex(0);
+    setReviewIndex(0);
   }, [eventIndex]);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setImageIndex((prev) => (prev + 1) % current.images.length);
+      setImageIndex((prev) =>
+        (prev + 1) % current.images.length
+      );
     }, 3500);
 
     return () => clearInterval(timer);
   }, [current]);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setReviewIndex((prev) =>
+        (prev + 1) % current.reviews.length
+      );
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [current]);
+
+  const review = current.reviews[reviewIndex];
+
+  const nextEvent = () => {
+    setEventIndex((prev) => (prev + 1) % events.length);
+  };
+
+  const previousEvent = () => {
+    setEventIndex((prev) => (prev - 1 + events.length) % events.length);
+  };
+
   return (
-    <section id="impact" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
+<section id="impact" className="py-24 bg-muted/30">
+  <div className="container mx-auto px-4">
 
-        <div className="text-center mb-16">
+    {/* Header */}
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our{" "}
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Impact
-            </span>
-          </h2>
+    <div className="text-center mb-16">
 
-          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-            Every collaboration, workshop, and community initiative represents
-            our commitment to creating meaningful global impact.
-          </p>
+      <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        Our{" "}
+        <span className="bg-gradient-accent bg-clip-text text-transparent">
+          Impact
+        </span>
+      </h2>
 
-        </div>
+      <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
+        Every collaboration, workshop and initiative reflects our commitment
+        to creating meaningful impact across communities worldwide.
+      </p>
 
-        <div className="flex justify-between items-center mb-8">
+    </div>
 
-          <Button
-            variant="outline"
-            onClick={() =>
-              setEventIndex(
-                (eventIndex - 1 + events.length) % events.length
-              )
-            }
-          >
-            <ChevronLeft />
-          </Button>
+    {/* Event Navigation */}
 
-          <h3 className="text-2xl font-bold">
-            {current.title}
-          </h3>
+    <div className="flex justify-between items-center max-w-6xl mx-auto mb-8">
 
-          <Button
-            variant="outline"
-            onClick={() =>
-              setEventIndex(
-                (eventIndex + 1) % events.length
-              )
-            }
-          >
-            <ChevronRight />
-          </Button>
+      <Button
+        variant="outline"
+        onClick={previousEvent}
+        className="rounded-full w-12 h-12 hover:bg-accent hover:text-background transition-all duration-300 hover:scale-110"
+      >
+        <ChevronLeft />
+      </Button>
 
-        </div>
+      <h3 className="text-2xl md:text-3xl font-bold text-center">
+        {current.title}
+      </h3>
 
-        <Card className="bg-gradient-card border-border/50 shadow-card">
+      <Button
+        variant="outline"
+        onClick={nextEvent}
+        className="rounded-full w-12 h-12 hover:bg-accent hover:text-background transition-all duration-300 hover:scale-110"
+      >
+        <ChevronRight />
+      </Button>
 
-          <img
-            src={current.images[imageIndex]}
-            className="w-full h-[420px] object-cover"
+    </div>
+
+    <Card className="max-w-6xl mx-auto overflow-hidden bg-gradient-card border-border/50 shadow-xl">
+
+      {/* IMAGE */}
+
+      <img
+        src={current.images[imageIndex]}
+        alt=""
+        className="w-full aspect-[1590/1000] object-cover transition-all duration-700"
+      />
+
+      {/* IMAGE DOTS */}
+
+      <div className="flex justify-center gap-3 py-5">
+
+        {current.images.map((_, index) => (
+
+          <button
+            key={index}
+            onClick={() => setImageIndex(index)}
+            className={`transition-all duration-500 rounded-full ${
+              imageIndex === index
+                ? "bg-accent w-10 h-2"
+                : "bg-white/30 w-2 h-2"
+            }`}
           />
 
-          <div className="flex justify-center gap-2 py-4">
+        ))}
 
-            {current.images.map((_, i) => (
+      </div>
 
-              <button
-                key={i}
-                onClick={() => setImageIndex(i)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  i === imageIndex
-                    ? "bg-accent"
-                    : "bg-white/30"
-                }`}
-              />
+      <CardContent className="p-8 lg:p-10">
 
-            ))}
+        {/* TOP BADGES */}
+
+        <div className="flex flex-wrap gap-3 mb-8">
+
+          <Badge>{current.country}</Badge>
+
+          <Badge variant="secondary">
+            {current.organization}
+          </Badge>
+
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-10">
+
+          {/* LEFT */}
+
+          <div>
+
+            <div className="grid grid-cols-2 gap-4 mb-8">
+
+              <Card className="p-4">
+                <Calendar className="text-accent mb-2" />
+                <p className="text-sm text-muted-foreground">Date</p>
+                <h4 className="font-semibold">{current.date}</h4>
+              </Card>
+
+              <Card className="p-4">
+                <MapPin className="text-accent mb-2" />
+                <p className="text-sm text-muted-foreground">Location</p>
+                <h4 className="font-semibold">{current.location}</h4>
+              </Card>
+
+              <Card className="p-4">
+                <Users className="text-accent mb-2" />
+                <p className="text-sm text-muted-foreground">Participants</p>
+                <h4 className="font-semibold">
+                  {current.participants}
+                </h4>
+              </Card>
+
+              <Card className="p-4">
+                <Globe className="text-accent mb-2" />
+                <p className="text-sm text-muted-foreground">Countries</p>
+                <h4 className="font-semibold">
+                  {current.countries}
+                </h4>
+              </Card>
+
+            </div>
+
+            <h4 className="text-xl font-semibold mb-4">
+              Featured Speakers
+            </h4>
+
+            <ul className="space-y-3">
+
+              {current.speakers.map((speaker) => (
+
+                <li
+                  key={speaker}
+                  className="flex items-center gap-3"
+                >
+                  <div className="w-2 h-2 rounded-full bg-accent"></div>
+
+                  {speaker}
+
+                </li>
+
+              ))}
+
+            </ul>
 
           </div>
 
-          <CardContent className="p-8">
+          {/* RIGHT */}
 
-            <div className="flex flex-wrap gap-3 mb-6">
+          <Card className="bg-background/40 border-border p-7">
 
-              <Badge>{current.country}</Badge>
+            <div className="flex items-center justify-between mb-5">
 
-              <Badge variant="secondary">
-                {current.organization}
-              </Badge>
+              <Quote className="text-accent w-9 h-9" />
 
-            </div>
+              <div className="flex gap-1">
 
-            <div className="grid md:grid-cols-2 gap-8">
-
-              <div>
-
-                <div className="flex items-center mb-3">
-
-                  <Calendar className="w-5 h-5 mr-3 text-accent"/>
-
-                  {current.date}
-
-                </div>
-
-                <div className="flex items-center mb-3">
-
-                  <MapPin className="w-5 h-5 mr-3 text-accent"/>
-
-                  {current.location}
-
-                </div>
-
-                <div className="flex items-center mb-3">
-
-                  <Users className="w-5 h-5 mr-3 text-accent"/>
-
-                  {current.participants}
-
-                </div>
-
-                <div className="flex items-center mb-6">
-
-                  <Globe className="w-5 h-5 mr-3 text-accent"/>
-
-                  {current.countries}
-
-                </div>
-
-                <h4 className="font-semibold mb-3">
-                  Speakers
-                </h4>
-
-                <ul className="space-y-2">
-
-                  {current.speakers.map((speaker) => (
-
-                    <li key={speaker}>
-                      • {speaker}
-                    </li>
-
-                  ))}
-
-                </ul>
-
-              </div>
-
-              <div>
-
-                <Quote className="w-8 h-8 text-accent mb-4"/>
-
-                <h4 className="text-xl font-semibold mb-3">
-                  Partner Testimonial
-                </h4>
-
-                <p className="text-foreground/80 leading-relaxed italic">
-                  "{current.review}"
-                </p>
+                <Star className="fill-yellow-400 text-yellow-400 w-4 h-4"/>
+                <Star className="fill-yellow-400 text-yellow-400 w-4 h-4"/>
+                <Star className="fill-yellow-400 text-yellow-400 w-4 h-4"/>
+                <Star className="fill-yellow-400 text-yellow-400 w-4 h-4"/>
+                <Star className="fill-yellow-400 text-yellow-400 w-4 h-4"/>
 
               </div>
 
             </div>
 
-          </CardContent>
+            <h4 className="text-2xl font-bold mb-2">
+              {review.name}
+            </h4>
 
-        </Card>
+            <p className="text-accent font-medium">
+              {review.role}
+            </p>
 
-      </div>
-    </section>
+            <p className="text-sm text-muted-foreground mb-6">
+              {review.company}
+            </p>
+
+            <p className="italic leading-8 text-foreground/80 transition-all duration-700">
+              "{review.text}"
+            </p>
+
+          </Card>
+
+        </div>
+
+      </CardContent>
+
+    </Card>
+
+  </div>
+</section>
   );
 };
 
