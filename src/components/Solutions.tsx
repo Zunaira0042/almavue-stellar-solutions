@@ -1,9 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Rocket, Code, Gamepad2, Satellite, Brain, Stethoscope, ArrowRight, Building2 } from "lucide-react";
+import {
+  ArrowRight,
+  HeartHandshake,
+  GraduationCap,
+  Orbit,
+  Glasses,
+  BrainCircuit,
+  Handshake,
+} from "lucide-react";
 
-const Services = () => {
-  const services = [
+const Solutions  = () => {
+  const solutions  = [
 {
   icon: <HeartHandshake className="w-12 h-12 text-accent" />,
   title: "Wellbeing & Human Development",
@@ -192,4 +200,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Solutions;

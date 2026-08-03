@@ -12,6 +12,7 @@ const Navigation = () => {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#services", label: "Services" },
+    { href: "#impact", label: "Impact" },
     // Removed Insights
     { href: "#contact", label: "Contact" },
   ];
