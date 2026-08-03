@@ -104,7 +104,7 @@ const Solutions  = () => {
 ];
 
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="solutions" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
