@@ -32,31 +32,30 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
-            Technology {" "}
+            Building the  {" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
-              with
+              Future
             </span>
-            {" "} Purpose
+            {" "} Through Innovation 
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-Almavue is a technology company creating innovative digital experiences that improve lives, advance education, promote wellbeing, and inspire exploration. Every solution we build is designed to solve meaningful challenges and create lasting impact.
-          </p>
+ Almavue is a technology company creating digital experiences that advance education, improve wellbeing, inspire exploration, and deliver meaningful solutions for communities worldwide.          </p>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">Human-Centered</div>
-              <div className="text-silver">Technology</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">30+</div>
+              <div className="text-silver">Global Experts</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-electric mb-2">Education &</div>
-              <div className="text-silver">Wellbeing</div>
+              <div className="text-3xl md:text-4xl font-bold text-electric mb-2">7+</div>
+              <div className="text-silver">Foucs Areas</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">Space &</div>
-              <div className="text-silver">XR</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">10+</div>
+              <div className="text-silver">Countries Reached</div>
             </div>
           </div>
         </div>

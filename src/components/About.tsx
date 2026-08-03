@@ -168,9 +168,7 @@ const About = () => {
             </span>
           </h2>
           <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            At Almavue, we're dedicated to developing innovative technology solutions that address 
-            real-world challenges. From space exploration to immersive gaming experiences, 
-            we create applications that make a difference.
+At Almavue, we're committed to developing innovative technology that empowers people, advances education, promotes wellbeing, and transforms ideas into meaningful solutions with lasting impact.
           </p>
         </div>
 
