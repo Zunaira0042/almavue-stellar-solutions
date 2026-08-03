@@ -22,27 +22,31 @@ import amandaImage from "@/assets/Amanda.png";
 
 const About = () => {
   const values = [
-    {
-      icon: <Rocket className="w-8 h-8 text-accent" />,
-      title: "Innovation First",
-      description: "We push boundaries and explore uncharted territories in technology and space."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-electric" />,
-      title: "Mission Driven",
-      description: "Every project serves a purpose - solving real problems and creating meaningful impact."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-accent" />,
-      title: "Collaborative",
-      description: "We work closely with clients and partners to achieve extraordinary results together."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-electric" />,
-      title: "Agile & Fast",
-      description: "Rapid development cycles ensure we deliver cutting-edge solutions quickly."
-    }
-  ];
+  {
+    icon: <Rocket className="w-8 h-8 text-accent" />,
+    title: "Purpose-Driven",
+    description:
+      "Every solution we create is designed to solve meaningful challenges and create lasting impact for people and communities."
+  },
+  {
+    icon: <Target className="w-8 h-8 text-electric" />,
+    title: "Research & Innovation",
+    description:
+      "We combine research, creativity, and emerging technologies to explore new ideas and develop forward-thinking solutions."
+  },
+  {
+    icon: <Users className="w-8 h-8 text-accent" />,
+    title: "Global Collaboration",
+    description:
+      "We work alongside experts, educators, researchers, and organizations worldwide to build technology that matters."
+  },
+  {
+    icon: <Zap className="w-8 h-8 text-electric" />,
+    title: "Human-Centered",
+    description:
+      "People are at the heart of everything we build, ensuring our technology is accessible, meaningful, and designed to improve lives."
+  }
+];
 
   const team = [
  {

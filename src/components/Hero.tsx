@@ -32,32 +32,31 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
-            Building the{" "}
+            Technology {" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
-              Future
+              with
             </span>
-            {" "}of Technology
+            {" "} Purpose
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Almavue develops cutting-edge applications, space-related solutions, and immersive games 
-            that solve real-world challenges and push the boundaries of what's possible.
+Almavue is a technology company creating innovative digital experiences that improve lives, advance education, promote wellbeing, and inspire exploration. Every solution we build is designed to solve meaningful challenges and create lasting impact.
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">5+</div>
-              <div className="text-silver">Projects Delivered</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">Human-Centered</div>
+              <div className="text-silver">Technology</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-electric mb-2">10+</div>
-              <div className="text-silver">Industries Served</div>
+              <div className="text-3xl md:text-4xl font-bold text-electric mb-2">Education &</div>
+              <div className="text-silver">Wellbeing</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">100%</div>
-              <div className="text-silver">Innovation Focused</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">Space &</div>
+              <div className="text-silver">XR</div>
             </div>
           </div>
         </div>

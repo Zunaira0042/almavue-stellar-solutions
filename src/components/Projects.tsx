@@ -11,9 +11,9 @@ const Projects = () => {
     {
       id: 1,
       title: "MindCare",
-      category: "Mental Health & AI",
+      category: "Global Wellbeing Initiative",
       description:
-        "MindCare is a global mental health platform connecting users with certified doctors and therapists across continents. It offers real-time counseling, AI-driven emotional support, and seamless session booking with payment integration.",
+        "MindCare is a global wellbeing initiative dedicated to empowering individuals, communities, educational institutions, and organizations through mental wellbeing, personal growth, and purpose-driven development. Combining expert guidance, digital technology, educational programs, and community engagement, MindCare helps create healthier, more resilient, and emotionally aware societies.",
       video: MindCareVideo,
       technologies: [
         "Unity",
@@ -26,7 +26,7 @@ const Projects = () => {
         "Google Sign-In",
       ],
       impact:
-        "Connecting patients with certified mental health professionals across 5 continents — helping people start their healing journey with trust and ease.",
+        "Empowering students, professionals, communities, and organizations through wellbeing programs, expert-led initiatives, educational workshops, and accessible digital support.",
       icon: <Smartphone className="w-6 h-6 text-accent" />,
       status: "Live",
       link: "https://mindcare.almavue.com/",
@@ -36,7 +36,7 @@ const Projects = () => {
       title: "SpaceX VR",
       category: "Virtual Reality",
       description:
-        "Space VR Project is an immersive virtual reality experience where I contributed as a Unity Developer, focusing on building interactive gameplay systems and optimizing the overall user experience. I worked on modular architecture and clean code practices, leveraging Zenject for dependency injection to maintain scalability and flexibility throughout the project.",
+        "SpaceX VR is an immersive space exploration experience designed to inspire curiosity about the universe through interactive technology. The project explores concepts from cosmology, quantum physics, relativity, wormholes, black holes, and the fundamental nature of space and time, transforming complex scientific ideas into engaging and accessible experiences.",
       video: SpaceVideo,
       technologies: [
         "Unity",
@@ -47,32 +47,13 @@ const Projects = () => {
         "Performance Optimization for VR",
       ],
       impact:
-        "Pioneering immersive space experiences through VR with modular, scalable, and high-performance gameplay systems.",
+        "The project aims to become a platform for exploring astronomy, cosmology, quantum physics, and future scientific discoveries through immersive experiences, education, and interactive storytelling.",
       icon: <Gamepad2 className="w-6 h-6 text-electric" />,
       status: "Beta",
       link: "#", // no live link
     },
-    {
-      id: 3,
-      title: "Haunted Town",
-      category: "PC FPS / 3D",
-      description:
-        "Haunted Town is a first-person Unity project set in a fully immersive 3D environment with enemy AI and optimized gameplay. The project demonstrates strong FPS mechanics and rich, interactive environments.",
-      video: HauntedVideo,
-      technologies: [
-        "Unity",
-        "FPS Mechanics",
-        "3D Environments",
-        "Enemy AI Integration",
-        "Performance Optimization",
-      ],
-      impact:
-        "An engaging, immersive first-person experience optimized for PC users, highlighting strong environmental design and interactive gameplay.",
-      icon: <Gamepad2 className="w-6 h-6 text-electric" />,
-      status: "Live",
-      link: "https://apps.microsoft.com/detail/9ppgs21dkcck?hl=en-US&gl=US", // optional demo link
-    },
-  ];
+    
+   ];
 
   const getStatusBadge = (status) => {
     const statusConfig = {

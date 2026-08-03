@@ -4,94 +4,96 @@ import { Rocket, Code, Gamepad2, Satellite, Brain, Stethoscope, ArrowRight, Buil
 
 const Services = () => {
   const services = [
+{
+  icon: <HeartHandshake className="w-12 h-12 text-accent" />,
+  title: "Wellbeing & Human Development",
+  description:
+    "Empowering individuals, communities, schools, universities, and organizations through technology, education, and purpose-driven wellbeing initiatives.",
+  features: [
+    "Student wellbeing programs",
+    "Corporate wellbeing initiatives",
+    "Community engagement",
+    "Digital wellbeing platforms"
+  ],
+  color: "accent"
+},
+    
+ {
+  icon: <GraduationCap className="w-12 h-12 text-electric" />,
+  title: "Education & Research",
+  description:
+    "Creating innovative learning experiences and research collaborations that inspire curiosity, critical thinking, and lifelong learning.",
+  features: [
+    "Educational technology",
+    "Research collaborations",
+    "Interactive learning",
+    "Academic partnerships"
+  ],
+  color: "electric"
+},
     {
-      icon: <Satellite className="w-12 h-12 text-accent" />,
-      title: "Space Exploration & VR Education",
-      description:
-        "Immersive VR-based space experiences where users can explore galaxies, black holes, nebulas, and planetary systems — making space science interactive and educational.",
-      features: [
-        "Virtual reality space exploration",
-        "Interactive black hole & nebula simulations",
-        "Galactic-scale learning environments",
-        "Educational tools on space-time & gravity"
-      ],
-      color: "accent"
-    },
+  icon: <Orbit className="w-12 h-12 text-accent" />,
+  title: "Space Science & Exploration",
+  description:
+    "Immersive experiences that bring astronomy, cosmology, relativity, and quantum physics to life through interactive technologies.",
+  features: [
+    "Virtual space exploration",
+    "Cosmology simulations",
+    "Black holes & wormholes",
+    "Interactive scientific learning"
+  ],
+  color: "accent"
+},
     {
-      icon: <Code className="w-12 h-12 text-electric" />,
-      title: "Custom Application Development",
-      description:
-        "We build full-stack web and mobile applications tailored to your goals — combining modern architecture, smooth interfaces, and scalable cloud systems.",
-      features: [
-        "Web application development",
-        "Mobile app development",
-        "API design & integration",
-        "Cloud infrastructure solutions"
-      ],
-      color: "electric"
-    },
-    {
-      icon: <Gamepad2 className="w-12 h-12 text-accent" />,
-      title: "Game Development",
-      description:
-        "Engaging and meaningful game experiences, combining creativity, storytelling, and immersive technologies such as AR and VR to educate, entertain, and inspire.",
-      features: [
-        "3D & VR game experiences",
-        "Educational game design",
-        "Interactive learning environments",
-        "Optimized cross-platform builds"
-      ],
-      color: "accent"
-    },
-    {
-      icon: <Brain className="w-12 h-12 text-electric" />,
-      title: "AI & Machine Learning",
-      description:
-        "Building intelligent systems and vertical agents that merge AI into fields like healthcare, engineering, and agriculture — enhancing decision-making and modernization.",
-      features: [
-        "AI-driven diagnostic tools",
-        "Predictive & prescriptive analytics",
-        "Computer vision & NLP",
-        "Vertical agents for diverse industries"
-      ],
-      color: "electric"
-    },
-    {
-      icon: <Stethoscope className="w-12 h-12 text-accent" />,
-      title: "Healthcare & Mental Wellness Technology",
-      description:
-        "Digital solutions focused on mental health and medical innovation — connecting international doctors, improving accessibility, and enabling research-driven care.",
-      features: [
-        "Telemedicine & virtual consultations",
-        "Mental health support systems",
-        "AI-assisted healthcare platforms",
-        "Research & data-driven patient care"
-      ],
-      color: "accent"
-    },
-    {
-      icon: <Building2 className="w-12 h-12 text-electric" />,
-      title: "Architecture & Innovation Consulting",
-      description:
-        "From technology roadmaps to digital transformation and architectural visualization — we bridge creativity, research, and technology to build the future.",
-      features: [
-        "Technology roadmapping & R&D",
-        "Architectural visualization (AR/VR)",
-        "Digital transformation strategies",
-        "Innovation workshops & design thinking"
-      ],
-      color: "electric"
-    }
+  icon: <Glasses className="w-12 h-12 text-electric" />,
+  title: "XR & Immersive Technologies",
+  description:
+    "Building immersive virtual and augmented reality experiences that educate, inspire, and transform how people interact with digital environments.",
+  features: [
+    "Virtual Reality",
+    "Augmented Reality",
+    "Interactive simulations",
+    "Immersive storytelling"
+  ],
+  color: "electric"
+},    
+      
+{
+  icon: <BrainCircuit className="w-12 h-12 text-accent" />,
+  title: "Intelligent Digital Solutions",
+  description:
+    "Designing modern digital platforms that combine intelligent technologies with human-centered experiences to solve meaningful challenges.",
+  features: [
+    "Web platforms",
+    "Mobile applications",
+    "Cloud solutions",
+    "Intelligent automation"
+  ],
+  color: "accent"
+}, 
+ {
+  icon: <Handshake className="w-12 h-12 text-electric" />,
+  title: "Strategic Innovation & Partnerships",
+  description:
+    "Collaborating with universities, organizations, communities, and industry partners to create sustainable innovation and long-term impact.",
+  features: [
+    "University partnerships",
+    "Innovation consulting",
+    "Research initiatives",
+    "Technology strategy"
+  ],
+  color: "electric"
+}
   ];
 
   const problemsSolved = [
-    "Creating immersive educational experiences through VR and interactive design",
-    "Bridging technology with healthcare, engineering, and architecture",
-    "Developing AI systems that understand and adapt to diverse fields",
-    "Enabling scalable and modern digital infrastructures",
-    "Advancing mental health and well-being through intelligent platforms",
-    "Transforming traditional learning into experiential knowledge"
-  ];
+  "Making education more engaging through immersive technologies.",
+  "Supporting wellbeing across schools, universities, workplaces, and communities.",
+  "Transforming complex scientific concepts into interactive learning experiences.",
+  "Bridging research, education, and technology through meaningful innovation.",
+  "Creating scalable digital platforms that improve accessibility and human connection.",
+  "Building collaborative solutions that create lasting social and educational impact."
+];
 
   return (
     <section id="services" className="py-24 bg-background">
