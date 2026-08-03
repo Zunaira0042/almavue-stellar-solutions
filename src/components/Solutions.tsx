@@ -122,7 +122,7 @@ const Solutions  = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => (
+  {solutions.map((service, index) => (
             <Card
               key={index}
               className="bg-gradient-card border-border/50 shadow-card hover:shadow-glow/20 transition-all duration-300 group"
