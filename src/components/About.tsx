@@ -49,12 +49,12 @@ const About = () => {
 ];
 
   const team = [
- {
-    name: "Zunaira Nazir",
-    role: "Chief Technical Officer (CTO)",
+{
+    name: "Shagufta Naz",
+    role: "Chair Person",
     country: "Pakistan",
-    specialization: "Unity | Web | XR",
-    image: ctoImage,
+    specialization: "Social Impact | Social Services",
+    image: ceoImage,
 },
 {
     name: "Tanja Schmid",
@@ -62,6 +62,14 @@ const About = () => {
     country: "Germany",
     specialization: "Marketing | Branding",
     image: cmoImage,
+},
+
+ {
+    name: "Zunaira Nazir",
+    role: "Chief Technical Officer (CTO)",
+    country: "Pakistan",
+    specialization: "Unity | Web | XR",
+    image: ctoImage,
 },
 {
     name: "Nudrat Naem",
